@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>AIR QUALITY</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToSearchPopUp()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="halfCircleBottom" padding>
+    <div class="progress-wrapper">
+      <div class="current">{{ city.aqi }} AQI</div>
+      <round-progress [current]="city.aqi" [max]="200" [responsive]="true"
+       [color]="'rgba(255,255,255,0.6)'" [background]="'rgba(255,255,255,0.2)'">
+      </round-progress>
+    </div>
+    <div class="cityWrapper">
+      <h2>{{city.cityName}}</h2>
+    </div>
+  </div>
+  <h1 text-center>{{city.message}}</h1>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-navbar class="headerCollor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>COUNTRY STATIONS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <button class="buttonDesign" ion-item *ngFor="let city of cities" (click)="goToDetailPage(city)">
+      <ion-thumbnail item-start>
+        <round-progress [responsive]="true" [current]="city.aqi" [max]="200" [color]="'rgba(255,255,255,0.6)'" [background]="'rgba(255,255,255,0.2)'"></round-progress>
+      </ion-thumbnail>
+      <h2>{{city.cityName}}</h2>
+    </button>
+  </ion-list>
+</ion-content>

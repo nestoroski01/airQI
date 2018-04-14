@@ -1,0 +1,66 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.title.title-md {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate3d(-50%,0,0);
+    height: 100%;
+    width: 70%;
+    text-align: center;
+}
+ion-icon{
+    color: rgba(255, 255,255,0.7);
+}
+// .menuHeader{
+//     // width: 25%;
+//     // height: auto;
+//     padding: 15%;
+// }
+// .sidemenu {
+//     background-color: #00BFA5 !important; /* This sets the background color*/
+//    }
+.halfCircle{
+    img{
+        width:25%;
+        padding-top: 8%;
+    }
+    height:40%;
+    width:200%;
+    border-radius: 0 0 200% 200%;
+    transform: translate3d(-25%,0,0);
+    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px; 
+}
+.sidemenu{
+    ion-icon{
+        color: black;
+    }
+}
+.sidemenu .item {
+    border:none;   /*Removes all borders*/
+    color: black;
+    text-align: left;
+    font-weight: 500;
+    border-radius: 10px;
+  }
+   
+   
