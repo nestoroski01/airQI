@@ -13,9 +13,14 @@
     </ion-refresher-content>
   </ion-refresher>
   <ion-list>
-    <button class="buttonDesign" ion-item *ngFor="let city of cities" (click)="goToDetailPage(city)">
+    <button class="buttonDesign" [ngClass]="getButtonColor(city.color)" ion-item *ngFor="let city of cities" (click)="goToDetailPage(city)">
       <ion-thumbnail item-start>
-        <round-progress [responsive]="true" [current]="city.aqi" [max]="200" [color]="'rgba(255,255,255,0.6)'" [background]="'rgba(255,255,255,0.2)'"></round-progress>
+        <div class="progress-wrapper">
+          <div class="current">{{ city.aqi }} AQI</div>
+          <round-progress [current]="city.aqi" [max]="200" [responsive]="true"
+                          [color]="'rgba(255,255,255,0.6)'" [background]="'rgba(255,255,255,0.2)'">
+          </round-progress>
+        </div>
       </ion-thumbnail>
       <h2>{{city.cityName}}</h2>
     </button>
